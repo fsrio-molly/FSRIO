@@ -1,0 +1,697 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>All Publications Code</title>
+
+<style>
+	.clear {
+		clear: both; 
+	}
+	body {
+		width: 800px; 
+		font-family: Verdana; 
+	}
+	a {
+		color: #8c2e08; 
+		text-decoration: none; 
+	}
+	
+	a:hover {
+		text-decoration: underline; 
+		color: #da9072; 
+	}
+	
+	#publications-filters form {
+		background-color: #0d233c; 
+		float: left; 
+	}
+	#publications-filters.main{
+		width: 66%; 
+		float: left; 	
+	}
+	
+	#publications-filters.main form {
+		width: 100%; 
+		padding: 3% 2% 3% 2%; 
+	}
+	
+	#publications-filters.browse-by form{
+		width:100%; 
+		margin-top: 10px; 
+		padding: 1% 2% 1% 2%; 
+	}
+	
+	#publications-filters form input[type="text"] {
+		float: left; 
+		height: 34px; 
+		border: 0; 
+		display: block; 
+	}
+	
+	#publications-filters.main form input[type="text"]{
+		width: 82%; 
+	}
+	
+	#publications-filters.browse-by form input[type="text"] {
+		width: 89%; 
+		padding: 0;
+		margin-bottom: 2px;
+	}
+	
+	#publications-filters form input[type="submit"] {
+		background-color: #883400; 
+		display: block; 
+		float: right; 
+		display: block; 
+		border: 0px; 
+		height: 34px; 
+		color: white; 
+		font-weight: bold; 
+	}
+	
+	#publications-filters.main form input[type="submit"] {
+		width: 16%; 
+		font-size: 93%; 
+		height: 34px; 
+	}
+	
+	#publications-filters.browse-by form input[type="submit"] {
+		width: 10%; 
+		margin: 0 0 0 1%; 
+	}
+	
+	#publications-header label, #publications-filters label {
+		color: white; 
+		font-weight: bold; 
+		clear: both; 
+		display: block; 
+		padding-bottom: 10px; 
+	}
+	
+	#publications-header label {color: black; padding-bottom: 0;  }
+	
+	#publications-header.main{
+		width: 27%; 
+		float: right; 
+	}
+	
+	#publications-header.main #quick-links ul {
+		margin: 0; 
+		padding: 0; 
+		list-style: none; 
+	}
+	
+	#return-link {
+		display: block; 
+		float: left; 
+		padding-bottom: 10px; 
+	}
+	
+	
+	#publications-header
+	
+	/*Subject Browse*/
+	
+	#subject-browse {
+		clear: both; 
+		width: 100%; 
+		background-color: #edf0f2; 
+		border: 1px solid #c2c9d1; 
+		float: left; 
+		margin-bottom: 10px; 
+	}
+	
+	#subject-browse ul {
+		list-style: none; 
+		float: left; 
+		padding-left: 0px;
+		margin:0;  
+	}
+	
+	#subject-browse ul li a {color: black;}
+	#subject-browse ul li a:hover {color: black;}
+	
+	#subject-browse #subjects-list {
+		width: 29%;  
+		margin: 0; 
+		line-height: 252%;  
+		background-color: #ECF0F2; 
+	}
+
+	#subject-browse #subjects-list li {
+		border-right: 1px solid #B4B7B9; 
+		border-bottom: 1px solid #B4B7B9; 
+		padding-left: 8px; 
+	}
+	
+	#subject-browse #subjects-list li:hover {
+		background-color: #0D233C; 
+	}
+	
+	#subject-browse #subjects-list li:hover a {
+		color: white; 
+		text-decoration:none;  
+	}
+	
+	#subject-browse #subjects-list .last-subject {
+		padding-bottom: 5px; 
+	}
+	
+	#subject-browse #subjects-list .last-subject {
+		padding-top: 5px; 
+	}
+	
+	#subject-browse #subjects-list .active-subject {
+		border-right: 1px solid #F9FDFF; 
+		background-color: #F9FDFF;
+	}
+	
+	#subject-browse #subjects-list .active-subject:hover {
+		border-right: 1px solid #F9FDFF !important; 
+		background-color: #F9FDFF !important;
+	}
+	
+	#subject-browse #subjects-list .active-subject:hover a {
+		color: black !important; 
+	}
+	
+	#subject-browse #topics-list.left {
+		width: 31%; 
+		padding-left: 3%; 
+		padding-right: 5%; 
+		line-height: 162%; 
+		margin-top: 5px; 
+		margin-bottom: 5px; 
+	}
+	
+	#subject-browse #topics-list.right {
+		width: 29%; 
+		padding-right: 2%; 
+		line-height: 162%; 
+		margin-top: 5px; 
+		margin-bottom: 5px; 
+	}
+	
+	/*Journals List */
+	
+	#alphabet-browse {
+		width: 100%; 
+		background-color: #edf0f2; 
+		border: 1px solid #c2c9d1; 
+		float: left; 
+		font-size: 14px; 
+		margin-bottom: 35px; 
+	}
+	
+	#alphabet-browse  ul {
+		list-style: none; 
+		float: left; 
+		padding: 0px; 
+		margin: 0 4% 0 4%; 
+	}
+	
+	#alphabet-browse  ul li {
+		padding: 7px; 
+		float: left; 
+	}
+	
+	#alphabet-browse ul li a {
+		text-decoration: none;
+		color: #8c2e08;
+		font-weight: bold; 
+	}	
+ 
+	#alphabet-browse ul li a:hover {color: #da9072;}
+	.letter {
+			color: black;
+			font-weight: bold;
+			display: block;
+			margin-top: 35px;
+			   
+	}
+	 
+	.letter:hover {color: black;}
+	 
+	#alphabet-browse ul li a.inactive {color: #666666;}
+	#alphabet-browse ul li a.inactive:hover {color: #666666;}
+	 
+	.journal-list {
+				list-style: none;
+				padding: 0px;
+	}
+	 
+	.journal-list li { margin-bottom: 10px; }
+	.journal-list li a{ text-decoration: none; color:#0d233c;}
+	.journal-list li a:hover {color:#1f5490; text-decoration: underline;}
+	.journal-list li.return a {color: #8c2e08; }
+ 
+</style>
+
+</head>
+
+<body>
+
+<!-------Publications - Main ---->
+<h1>Publications - Main</h1>
+
+<div class="view-header main" id="publications-header"> 
+	<div id="quick-links"> 
+    	<label>Quick Links</label>
+        <ul>
+            <li><a href="https://www.nal.usda.gov/fsrio/peer-reviewed-journals">> Browse by journal</a></li>
+            <li><a href="https://www.nal.usda.gov/fsrio/food-pathogens-and-chemical-contaminants">> Browse by subject</a></li>
+            <li><a href="https://www.nal.usda.gov/fsrio/research-publications/usda-research-publications-peer-reviewed-journals">> See USDA articles </a></li>
+            <li><a href="https://www.nal.usda.gov/fsrio/research-publications/fda-research-publications-peer-reviewed-journals">> See FDA articles </a></li>
+        </ul> 
+    </div><!--end quick-links-->
+</div><!--end publications-header--> 
+
+<div class="view-filters main" id="publications-filters">
+	<form>
+    	<label>Search</label>
+        <input type="text" name="keyword" size="30" maxlength="128" />
+        <input type="submit" name="submit" value="Search" />
+    </form>
+</div><!--end publications-filters--> 
+
+<div class="clear"></div>
+
+
+
+
+<!-------Publications - Browse by Subject ---->
+<h1>Browse by Subject</h1>
+
+<div class="view-header" id="publications-header"> 
+	<a id="return-link" class="browse-by" href=""><< Return to all publications </a>
+    <div id="subject-browse">
+    	<ul id="subjects-list">
+        	<li class="first-subject active-subject"><a href="/fsrio/research/publications/bacterial-pathogens">Bacterial Pathogens</a></li>
+            <li><a href="/fsrio/research/publications/chemical-contaminants">Chemical Contaminants</a></li>
+            <li><a href="/fsrio/research/publications/natural-toxins">Natural Toxins</a></li>
+            <li><a href="/fsrio/research/publications/parasites">Parasites</a></li>
+            <li class="last-subject"><a href="/fsrio/research/publications/viruses">Viruses</a></li>
+        </ul>
+        
+        <ul id="topics-list" class="left">
+        	<li><a class="bacillus-cereus[!1] active-topic" href="/fsrio/research/publications/bacterial-pathogens/bacillus-cereus">Bacillus Cereus</a></li>
+            <li><a class="campylobacter[!1]" href="/fsrio/research/publications/bacterial-pathogens/campylobacter">Campylobacter species</a></li>
+            <li><a class="clostridium-botulinum[!1]" href="/fsrio/research/publications/bacterial-pathogens/clostridium-botulinum">Clostridium botulinum</a></li>
+            <li><a class="clostridium-perfringens[!1]" href="/fsrio/research/publications/bacterial-pathogens/clostridium-perfringens">Clostridium perfringens</a></li>
+            <li><a class="cronobacter[!1]" href="/fsrio/research/publications/bacterial-pathogens/cronobacter">Cronobacter species</a></li>
+            <li><a class="enterohemorrhagic-escherichia-coli[!1]" href="/fsrio/research/publications/bacterial-pathogens/enterohemorrhagic-escherichia-coli">Enterohemorrhagic escherichia coli</a></li>
+            <li><a class="escherichia-coli-o157h7[!1]" href="/fsrio/research/publications/bacterial-pathogens/escherichia-coli-o157:h7">Eschericia coli O157:H7</a></li>
+        </ul>
+        
+        <ul id="topics-list" class="right">
+        	<li><a class="listeria-monocytogenes[!1]" href="/fsrio/research/publications/bacterial-pathogens/listeria-monocytogenes">Listeria monocytogenes</a></li>
+        	<li><a class="salmonella[!1]" href="/fsrio/research/publications/bacterial-pathogens/salmonella">Salmonella species</a></li>
+            <li><a class="shigella[!1]" href="/fsrio/research/publications/bacterial-pathogens/shigella">Shigella species</a></li>
+            <li><a class="staphylococcus-aureus[!1]" href="/fsrio/research/publications/bacterial-pathogens/staphylococcus-aureus">Staphylococcus aureus</a></li>
+            <li><a class="vibrio[!1]" href="/fsrio/research/publications/bacterial-pathogens/vibrio">Vibrio species</a></li>
+            <li><a class="yersinia[!1]" href="/fsrio/research/publications/bacterial-pathogens/yersinia">Yersinia species</a></li>
+        </ul>
+        
+    </div><!--end subject-browse--> 
+</div><!--end publications-header--> 
+
+<div class="view-filters browse-by" id="publications-filters">
+	<form>
+    	<label>Search</label>
+        <input type="text" name="keyword" size="30" maxlength="128" />
+        <input type="submit" name="submit" value="Search" />
+    </form>
+</div><!--end publications-filters--> 
+<div class="clear"></div>
+
+
+
+
+<!-------Publications - Browse by Journal - Journal Page ---->
+<h1>Browse by Journal - Journal Page</h1>
+<div class="view-header" id="publications-header"> 
+	<a id="return-link" class="browse-by" href=""><< Return to all journals </a>
+</div><!--end publications-header--> 
+
+<div class="view-filters browse-by" id="publications-filters">
+	<form>
+    	<label>Search</label>
+        <input type="text" name="keyword" size="30" maxlength="128" />
+        <input type="submit" name="submit" value="Search" />
+    </form>
+</div><!--end publications-filters--> 
+<div class="clear"></div>
+
+
+
+
+<!-------Publications - Browse by Journal - Journals List ---->
+<h1>Browse by Journal - List of all Journals</h1>
+<p>This is to replace this <a href="https://www.nal.usda.gov/fsrio/peer-reviewed-journals">page.</a> </p>
+
+<a id="return-link" class="browse-by" href=""><< Return to all publications </a>
+<div id="alphabet-browse">
+    <ul>
+        <li><a href="#A">A</a></li>
+
+        <li><a href="#B">B</a></li>
+
+        <li><a href="#C">C</a></li>
+
+        <li><a class="inactive" >D</a></li>
+
+        <li><a href="#E">E</a></li>
+
+        <li><a href="#F">F</a></li>
+
+        <li><a href="#G">G</a></li>
+
+        <li><a class="inactive" >H</a></li>
+
+        <li><a href="#I">I</a></li>
+
+        <li><a href="#J">J</a></li>
+
+        <li><a class="inactive" >K</a></li>
+
+        <li><a href="#L">L</a></li>
+
+        <li><a href="#M">M</a></li>
+
+        <li><a class="inactive" >N</a></li>
+
+        <li><a class="inactive" >O</a></li>
+
+        <li><a href="#P">P</a></li>
+
+        <li><a class="inactive" >Q</a></li>
+
+        <li><a href="#R">R</a></li>
+
+        <li><a class="inactive" >S</a></li>
+
+        <li><a href="#T">T</a></li>
+
+        <li><a class="inactive" >U</a></li>
+
+        <li><a href="#V">V</a></li>
+
+        <li><a href="#W">W</a></li>
+
+        <li><a class="inactive" >X</a></li>
+
+        <li><a class="inactive" >Y</a></li>
+
+        <li><a href="#Z">Z</a></li>
+    </ul>
+</div><!--end alphabet-browse"-->
+
+<!----------------A------------------->
+<a class="letter" name="A">A</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/american-journal-of-food-science-and-technology">American Journal of Food Science and Technology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/american-journal-of-public-health">American Journal of Public Health</a></li>
+ 
+            <li><a href="/fsrio/research/publications/annual-review-of-food-science-and-technology">Annual Review of Food Science and Technology</a></li>
+            <li><a href="/fsrio/research/publications/annual-review-of-microbiology">Annual Review of Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/antimicrobial-resistance-and-infection-control">Antimicrobial Resistance and Infection Control</a></li>
+ 
+            <li><a href="/fsrio/research/publications/applied-and-environmental-microbiology">Applied and Environmental Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/applied-microbiology-and-biotechnology">Applied Microbiology and Biotechnology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/avian-diseases">Avian Diseases</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------B------------------->
+<a class="letter" name="B">B</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/bmc-microbiology">BMC Microbiology</a></li>
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------C------------------->
+<a class="letter" name="C">C</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/canadian-journal-of-microbiology">Canadian Journal of Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/clinical-microbiology-reviews">Clinical Microbiology Reviews</a></li>
+ 
+            <li><a href="/fsrio/research/publications/comprehensive-reviews-in-food-science-and-food-safety">Comprehensive Reviews in Food Science and Food Safety</a></li>
+ 
+            <li><a href="/fsrio/research/publications/critical-reviews-in-food-science-and-nutrition">Critical Reviews in Food Science and Nutrition</a></li>
+ 
+            <li><a href="/fsrio/research/publications/critical-reviews-in-microbiology">Critical Reviews in Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/current-opinion-in-microbiology">Current Opinion in Microbiology</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------E------------------->
+<a class="letter" name="E">E</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/emerging-infectious-diseases">Emerging Infectious Diseases</a></li>
+ 
+            <li><a href="/fsrio/research/publications/emerging-microbes-and-infections">Emerging Microbes and Infections</a></li>
+ 
+            <li><a href="/fsrio/research/publications/environmental-microbiology">Environmental Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/european-food-research-and-technology">European Food Research and Technology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/eurosurveillance">Eurosurveillance</a></li>
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------F------------------->
+<a class="letter" name="F">F</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/fems-microbiology-ecology">FEMS Microbiology Ecology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/fems-microbiology-letters">FEMS Microbiology Letters</a></li>
+ 
+            <li><a href="/fsrio/research/publications/fems-microbiology-reviews">FEMS Microbiology Reviews</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-additives-&amp;-contaminants:-part-a">Food Additives &amp; Contaminants: Part A</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-analytical-methods">Food Analytical Methods</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-and-bioprocess-technology">Food and Bioprocess Technology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-and-chemical-toxicology">Food and Chemical Toxicology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-and-environmental-virology">Food and Environmental Virology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-bioscience">Food Bioscience</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-research-international">Food Research International</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-reviews-international">Food Reviews International</a></li>
+ 
+            <li><a href="/fsrio/research/publications/foodborne-pathogens-and-disease">Foodborne Pathogens and Disease</a></li>
+ 
+            <li><a href="/fsrio/research/publications/frontiers-in-cellular-and-infection-microbiology">Frontiers in cellular and infection microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/frontiers-in-microbiology">Frontiers in Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-chemistry">Food Chemistry</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-control">Food Control</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-microbiology">Food Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-science-and-human-wellness">Food Science and Human Wellness</a></li>
+ 
+            <li><a href="/fsrio/research/publications/food-science-and-technology">Food Science and Technology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/fungal-genetics-and-biology">Fungal Genetics and Biology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/future-microbiology">Future Microbiology</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------G------------------->
+<a class="letter" name="G">G</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/gut-microbes">Gut Microbes</a></li>
+ 
+            <li><a href="/fsrio/research/publications/gut-pathogens">Gut Pathogens</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------I------------------->
+<a class="letter" name="I">I</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/infection-and-immunity">Infection and Immunity</a></li>
+ 
+            <li><a href="/fsrio/research/publications/international-dairy-journal">International Dairy Journal</a></li>
+ 
+            <li><a href="/fsrio/research/publications/international-journal-of-antimicrobial-agents">International Journal of Antimicrobial Agents</a></li>
+ 
+            <li><a href="/fsrio/research/publications/international-journal-of-food-microbiology">International Journal of Food Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/international-journal-of-food-safety,-nutrition-and-public-health">International Journal of Food Safety, Nutrition and Public Health</a></li>
+ 
+            <li><a href="/fsrio/research/publications/international-journal-of-food-science">International Journal of Food Science</a></li>
+ 
+            <li><a href="/fsrio/research/publications/international-journal-of-food-science-and-technology">International Journal of Food Science and Technology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/international-journal-of-medical-microbiology">International Journal of Medical Microbiology</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------J------------------->
+<a class="letter" name="J">J</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/journal-of-agricultural-and-food-chemistry">Journal of Agricultural and Food Chemistry</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-applied-microbiology">Journal of Applied Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-applied-poultry-research">Journal of Applied Poultry Research</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-bacteriology">Journal of Bacteriology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-clinical-microbiology">Journal of Clinical Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-dairy-science">Journal of Dairy Science</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-food-and-drug-analysis">Journal of Food and Drug Analysis</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-food-processing-and-preservation">Journal of Food Processing and Preservation</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-food-protection">Journal of Food Protection</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-food-quality">Journal of Food Quality</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-food-safety">Journal of Food Safety</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-food-science">Journal of Food Science</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-food-science-and-technology">Journal of Food Science and Technology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-industrial-microbiology-and-biotechnology">Journal of Industrial Microbiology and Biotechnology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-infectious-diseases">Journal of Infectious Diseases</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-microbiological-methods">Journal of Microbiological Methods</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-parasitology">Journal of Parasitology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-pathogens">Journal of Pathogens</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-the-science-of-food-and-agriculture">Journal of the Science of Food and Agriculture</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-toxicology-and-environmental-health---part-b:-critical-reviews">Journal of Toxicology and Environmental Health - Part B: Critical Reviews</a></li>
+ 
+            <li><a href="/fsrio/research/publications/journal-of-virological-methods">Journal of Virological Methods</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------L------------------->
+<a class="letter" name="L">L</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/letters-in-applied-microbiology">Letters in Applied Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/lwt-food-science-and-technology">LWT Food Science and Technology</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------M------------------->
+<a class="letter" name="M">M</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/meat-science">Meat Science</a></li>
+ 
+            <li><a href="/fsrio/research/publications/microbes-and-infection">Microbes and Infection</a></li>
+ 
+            <li><a href="/fsrio/research/publications/microbial-risk-analysis">Microbial Risk Analysis</a></li>
+ 
+            <li><a href="/fsrio/research/publications/microbiology">Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/microbiome">Microbiome</a></li>
+ 
+            <li><a href="/fsrio/research/publications/molecular-microbiology">Molecular Microbiology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/molecular-nutrition-and-food-research">Molecular Nutrition and Food Research</a></li>
+ 
+            <li><a href="/fsrio/research/publications/mycotoxin-research">Mycotoxin Research</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------P------------------->
+<a class="letter" name="P">P</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/plos-one">PLoS One</a></li>
+ 
+            <li><a href="/fsrio/research/publications/plos-pathogens">PLoS Pathogens</a></li>
+ 
+            <li><a href="/fsrio/research/publications/postharvest-biology-and-technology">Postharvest Biology and Technology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/poultry-science">Poultry Science</a></li>
+ 
+            <li><a href="/fsrio/research/publications/proceedings-of-the-national-academy-of-sciences">Proceedings of the National Academy of Sciences</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------R------------------->
+<a class="letter" name="R">R</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/research-in-microbiology">Research in Microbiology</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------T------------------->
+<a class="letter" name="T">T</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/toxicology">Toxicology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/toxicon">Toxicon</a></li>
+<li><a href="/fsrio/research/publications/toxins">Toxins</a></li>
+ 
+            <li><a href="/fsrio/research/publications/trends-in-food-science-and-technology">Trends in Food Science and Technology</a></li>
+ 
+            <li><a href="/fsrio/research/publications/trends-in-microbiology">Trends in Microbiology</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------V------------------->
+<a class="letter" name="V">V</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/veterinary-microbiology">Veterinary Microbiology</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------W------------------->
+<a class="letter" name="W">W</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/world-mycotoxin-journal">World Mycotoxin Journal</a></li>
+ 
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+ 
+<!----------------Z------------------->
+<a class="letter" name="Z">Z</a>
+<ul class="journal-list">
+            <li><a href="/fsrio/research/publications/zoonoses-and-public-health">Zoonoses and Public Health</a></li>
+            <li class="return"><a href="#alphabet-browse">Return to top</a></li>
+</ul>
+
+
+
+
+</body>
+</html>
